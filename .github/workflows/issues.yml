@@ -1,0 +1,9 @@
+name: Print Issues event details
+on: [issues]
+jobs:
+  print-event-details:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Print event details
+        run: echo ${{ toJson(github.event)}}
